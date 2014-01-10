@@ -1,4 +1,5 @@
 /* main.c - the entry point for the kernel */
+/* cannibalized from http://wiki.osdev.org/ARM_RaspberryPi_Tutorial_C which is under CC0 */
  
 #include <stdint.h>
 #include <devices/graphics.h> 

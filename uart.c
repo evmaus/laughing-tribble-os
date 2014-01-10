@@ -3,6 +3,7 @@
  * http://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf
  * Chapter 13: UART
  */
+/* largely cannibalized from http://wiki.osdev.org/ARM_RaspberryPi_Tutorial_C which is CC0 */
  
 #include <stdint.h>
 #include <devices/mmio.h>

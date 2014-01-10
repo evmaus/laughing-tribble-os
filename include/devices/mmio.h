@@ -1,5 +1,5 @@
 /* mmio.h - access to MMIO registers */
- 
+/* largely cannibalized from http://wiki.osdev.org/ARM_RaspberryPi_Tutorial_C */ 
 #ifndef MMIO_H
 #define MMIO_H
  

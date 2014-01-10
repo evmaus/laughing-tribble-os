@@ -1,5 +1,5 @@
 /* uart.h - UART initialization & communication */
- 
+/* largely cannibalized from http://wiki.osdev.org/ARM_RaspberryPi_Tutorial_C which is CC0 */ 
 #ifndef UART_H
 #define UART_H
  
