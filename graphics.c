@@ -104,23 +104,24 @@ uint32_t graphics_init(){
 void draw_pixel(uint32_t x, uint32_t y, uint32_t color){
     uint32_t * pixel = 0;
     if((color >> fb.depth) == 0 && (x < fb.vwidth) && (y<fb.vheight)){ //Make sure we have appropriate color depth, x, y.
-        pixel = (uint32_t*) (fb.gpu_ptr + x*(fb.depth/8)+y*(fb.depth/8)*fb.vwidth);
-        *pixel = (*pixel & ((0xFFFFFFFF >> fb.depth) << fb.depth))+color;
+        pixel = (uint32_t*) (fb.gpu_ptr + x*4+y*4*fb.vwidth);
+        *pixel = color;
     }
 }
 
 //const char* grt_enter = "Entering the graphics render test.";
 void graphics_render_test(){
    uint32_t color=0;
-   uint32_t* base = (uint32_t*) fb.gpu_ptr;
+//   uint32_t* base = (uint32_t*) fb.gpu_ptr;
    //serial_puts(grt_enter);
    for(int i=0; i<fb.vwidth; i++){
       for(int j=0; j<fb.vheight; j++){
-	   *base = color;
+	   //*base = color;
 	   //serial_putIntHex((uint32_t)base);
            //serial_putIntHex(*base);
+           draw_pixel(i, j, color);
            color++;
-	   base+=1;
+	   //base+=1;
       }
    }
 }

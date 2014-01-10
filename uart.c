@@ -5,8 +5,8 @@
  */
  
 #include <stdint.h>
-#include <mmio.h>
-#include <uart.h>
+#include <devices/mmio.h>
+#include <devices/uart.h>
  
 enum {
     // The GPIO registers base address.
